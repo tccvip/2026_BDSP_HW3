@@ -1,0 +1,13 @@
+{
+  "topic": "ratings-30k",
+  "requested_records": 30000,
+  "successful_records": 30000,
+  "failed_records": 0,
+  "not_submitted_records": 0,
+  "unresolved_records": 0,
+  "elapsed_seconds": 3.011591,
+  "throughput_records_per_second": 9961.51,
+  "timestamp": "2026-11-06T15:33:16.200860+00:00",
+  "bootstrap_server": "localhost:9092",
+  "errors": []
+}

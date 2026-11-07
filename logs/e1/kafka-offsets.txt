@@ -1,0 +1,8 @@
+=== ratings-5k ===
+ratings-5k:0:4454
+ratings-5k:1:4818
+ratings-5k:2:728
+=== ratings-30k ===
+ratings-30k:0:23700
+ratings-30k:1:17314
+ratings-30k:2:18986

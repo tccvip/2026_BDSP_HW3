@@ -1,0 +1,10 @@
+Topic: ratings-30k
+Requested records: 30000
+Successful records: 30000
+Failed records: 0
+Not submitted records: 0
+Unresolved records: 0
+Elapsed seconds: 3.011591
+Throughput (successful records/second): 9961.51
+Timestamp: 2026-11-06T15:33:16.200860+00:00
+Bootstrap server: localhost:9092
