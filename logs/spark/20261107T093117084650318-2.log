@@ -1,0 +1,56 @@
+Run ID: 20261107T093117084650318-2
+UTC start: 2026-11-07T09:31:17+00:00
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+HADOOP_HOME=/home/canh/hadoop
+HADOOP_CONF_DIR=/home/canh/hadoop/etc/hadoop
+openjdk version "1.8.0_504"
+OpenJDK Runtime Environment (build 1.8.0_504-8u504-ga-1ubuntu1~26.04.3-b01)
+OpenJDK 64-Bit Server VM (build 25.504-b01, mixed mode)
+Python 3.12.16
+               total        used        free      shared  buff/cache   available
+Mem:           6.6Gi       4.4Gi       412Mi        80Mi       1.9Gi       2.2Gi
+Swap:          7.6Gi       1.1Gi       6.6Gi
+    PID COMMAND           RSS COMMAND
+Exception in thread "main" java.lang.ExceptionInInitializerError
+	at org.apache.spark.deploy.SparkSubmitArguments.$anonfun$loadEnvironmentArguments$5(SparkSubmitArguments.scala:163)
+	at scala.Option.orElse(Option.scala:447)
+	at org.apache.spark.deploy.SparkSubmitArguments.loadEnvironmentArguments(SparkSubmitArguments.scala:163)
+	at org.apache.spark.deploy.SparkSubmitArguments.<init>(SparkSubmitArguments.scala:118)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2$$anon$3.<init>(SparkSubmit.scala:1108)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.parseArguments(SparkSubmit.scala:1108)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:86)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.net.SocketException: Operation not permitted (Socket creation failed)
+	at java.net.NetworkInterface.getAll(Native Method)
+	at java.net.NetworkInterface.getNetworkInterfaces(NetworkInterface.java:355)
+	at org.apache.spark.util.Utils$.findLocalInetAddress(Utils.scala:964)
+	at org.apache.spark.util.Utils$.localIpAddress$lzycompute(Utils.scala:950)
+	at org.apache.spark.util.Utils$.localIpAddress(Utils.scala:950)
+	at org.apache.spark.util.Utils$.$anonfun$localCanonicalHostName$1(Utils.scala:1007)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.util.Utils$.localCanonicalHostName(Utils.scala:1007)
+	at org.apache.spark.internal.config.package$.<init>(package.scala:1063)
+	at org.apache.spark.internal.config.package$.<clinit>(package.scala)
+	... 10 more
+Traceback (most recent call last):
+  File "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/spark/run_hw3.py", line 315, in <module>
+    main()
+  File "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/spark/run_hw3.py", line 306, in main
+    .config("spark.hadoop.dfs.replication", "1").getOrCreate())
+                                                 ^^^^^^^^^^^^^
+  File "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/.venv/lib/python3.12/site-packages/pyspark/sql/session.py", line 497, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/.venv/lib/python3.12/site-packages/pyspark/context.py", line 515, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+  File "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/.venv/lib/python3.12/site-packages/pyspark/context.py", line 201, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/.venv/lib/python3.12/site-packages/pyspark/context.py", line 436, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+                                       ^^^^^^^^^^^^^^^^^^^^
+  File "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/.venv/lib/python3.12/site-packages/pyspark/java_gateway.py", line 107, in launch_gateway
+    raise PySparkRuntimeError(
+pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+Application exit code: 1

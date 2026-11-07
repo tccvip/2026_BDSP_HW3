@@ -1,0 +1,176 @@
+{
+  "run_id": "20261107T093200113988276-20197",
+  "timestamp": "2026-11-07T09:32:25.240299+00:00",
+  "environment": {
+    "python": "3.12.16",
+    "spark": "3.5.9",
+    "java": "1.8.0_504",
+    "master": "local[*]",
+    "hadoop_client": "3.3.4",
+    "default_fs": "hdfs://localhost:9000",
+    "shuffle_partitions": 4
+  },
+  "schemas": {
+    "ratings": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "userId",
+          "type": "integer",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "movieId",
+          "type": "integer",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "rating",
+          "type": "double",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "timestamp",
+          "type": "integer",
+          "nullable": true,
+          "metadata": {}
+        }
+      ]
+    },
+    "movies": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "movieId",
+          "type": "integer",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "genres",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        }
+      ]
+    }
+  },
+  "paths": {
+    "ratings_csv": "hdfs://localhost:9000/user/bdsp/hw3/raw/ratings.csv",
+    "movies_csv": "hdfs://localhost:9000/user/bdsp/hw3/raw/movies.csv",
+    "ratings_parquet": "hdfs://localhost:9000/user/bdsp/hw3/curated/ratings_parquet",
+    "movie_stats_parquet": "hdfs://localhost:9000/user/bdsp/hw3/curated/movie_stats_parquet",
+    "movie_stats_json": "hdfs://localhost:9000/user/bdsp/hw3/curated/movie_stats_json"
+  },
+  "benchmark_policy": "One SparkSession, local[*], four shuffle partitions, no persist/cache calls. Each timing includes input DataFrame construction, query planning, HDFS read, CSV parsing or Parquet decoding, groupBy/count, and collect() to the driver. CSV uses an explicit schema; no CSV schema inference is timed. Parquet's stored schema metadata is read during construction. Startup, exports, validation, result comparison, and artifact writing are outside timed trials. One warm-up per format precedes all six timed trials (CSV three, then Parquet three). Earlier validation/export scans and warm-ups can populate HDFS/OS caches; caches are not flushed. These are warm-run measurements, not cold-disk tests.",
+  "statistics": {
+    "csv": {
+      "runtimes_seconds": [
+        0.24992604299995946,
+        0.20859052999958294,
+        0.2326740680000512
+      ],
+      "mean_seconds": 0.23039688033319786,
+      "median_seconds": 0.2326740680000512,
+      "min_seconds": 0.20859052999958294,
+      "max_seconds": 0.24992604299995946
+    },
+    "parquet": {
+      "runtimes_seconds": [
+        0.18476394700019227,
+        0.17260794100002386,
+        0.1755663519998052
+      ],
+      "mean_seconds": 0.17764608000000712,
+      "median_seconds": 0.1755663519998052,
+      "min_seconds": 0.17260794100002386,
+      "max_seconds": 0.18476394700019227
+    }
+  },
+  "checks": {
+    "ratings_csv_count": 100836,
+    "movies_csv_count": 9742,
+    "ratings_parquet_count": 100836,
+    "movie_groups": 9724,
+    "movie_summary_count": 1297,
+    "ratings_rows_equal": true,
+    "aggregations_equal": true,
+    "summary_outputs_equal": true
+  },
+  "movie_summary_sample": [
+    {
+      "movie_id": 356,
+      "title": "Forrest Gump (1994)",
+      "rating_count": 329,
+      "avg_rating": 4.1641
+    },
+    {
+      "movie_id": 318,
+      "title": "Shawshank Redemption, The (1994)",
+      "rating_count": 317,
+      "avg_rating": 4.429
+    },
+    {
+      "movie_id": 296,
+      "title": "Pulp Fiction (1994)",
+      "rating_count": 307,
+      "avg_rating": 4.1971
+    },
+    {
+      "movie_id": 593,
+      "title": "Silence of the Lambs, The (1991)",
+      "rating_count": 279,
+      "avg_rating": 4.1613
+    },
+    {
+      "movie_id": 2571,
+      "title": "Matrix, The (1999)",
+      "rating_count": 278,
+      "avg_rating": 4.1924
+    },
+    {
+      "movie_id": 260,
+      "title": "Star Wars: Episode IV - A New Hope (1977)",
+      "rating_count": 251,
+      "avg_rating": 4.2311
+    },
+    {
+      "movie_id": 480,
+      "title": "Jurassic Park (1993)",
+      "rating_count": 238,
+      "avg_rating": 3.75
+    },
+    {
+      "movie_id": 110,
+      "title": "Braveheart (1995)",
+      "rating_count": 237,
+      "avg_rating": 4.0316
+    },
+    {
+      "movie_id": 589,
+      "title": "Terminator 2: Judgment Day (1991)",
+      "rating_count": 224,
+      "avg_rating": 3.971
+    },
+    {
+      "movie_id": 527,
+      "title": "Schindler's List (1993)",
+      "rating_count": 220,
+      "avg_rating": 4.225
+    }
+  ],
+  "comparison": {
+    "csv_mean_minus_parquet_mean_seconds": 0.05275080033319074,
+    "csv_mean_divided_by_parquet_mean": 1.2969432274170565,
+    "csv_median_divided_by_parquet_median": 1.3252771123267935
+  }
+}

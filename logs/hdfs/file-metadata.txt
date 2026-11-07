@@ -1,0 +1,2 @@
+movies.csv | size=494431 bytes | block_size=134217728 bytes | replication=1
+ratings.csv | size=2483723 bytes | block_size=134217728 bytes | replication=1

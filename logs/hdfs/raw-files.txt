@@ -1,0 +1,3 @@
+Found 2 items
+-rw-r--r--   1 canh supergroup    482.8 K 2026-11-07 15:42 /user/bdsp/hw3/raw/movies.csv
+-rw-r--r--   1 canh supergroup      2.4 M 2026-11-07 15:42 /user/bdsp/hw3/raw/ratings.csv

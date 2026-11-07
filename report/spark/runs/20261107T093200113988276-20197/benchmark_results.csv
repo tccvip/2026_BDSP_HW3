@@ -1,0 +1,9 @@
+format,phase,trial,elapsed_seconds,groups,matches_reference
+csv,warmup,1,0.23620318099983706,9724,True
+parquet,warmup,1,0.20141516300009243,9724,True
+csv,timed,1,0.24992604299995946,9724,True
+csv,timed,2,0.20859052999958294,9724,True
+csv,timed,3,0.2326740680000512,9724,True
+parquet,timed,1,0.18476394700019227,9724,True
+parquet,timed,2,0.17260794100002386,9724,True
+parquet,timed,3,0.1755663519998052,9724,True

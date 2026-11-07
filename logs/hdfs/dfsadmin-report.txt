@@ -1,0 +1,42 @@
+Configured Capacity: 75896893440 (70.68 GB)
+Present Capacity: 47167627264 (43.93 GB)
+DFS Remaining: 47153684480 (43.92 GB)
+DFS Used: 13942784 (13.30 MB)
+DFS Used%: 0.03%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (localhost)
+Hostname: canh-ubuntu
+Decommission Status : Normal
+Configured Capacity: 75896893440 (70.68 GB)
+DFS Used: 13942784 (13.30 MB)
+Non DFS Used: 24827097088 (23.12 GB)
+DFS Remaining: 47153684480 (43.92 GB)
+DFS Used%: 0.02%
+DFS Remaining%: 62.13%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sat Nov 07 15:40:05 ICT 2026
+Last Block Report: Sat Nov 07 15:39:29 ICT 2026
+Num of Blocks: 4
+
+

@@ -1,0 +1,100 @@
+Run ID: 20261107T093200113988276-20197
+UTC start: 2026-11-07T09:32:00+00:00
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+HADOOP_HOME=/home/canh/hadoop
+HADOOP_CONF_DIR=/home/canh/hadoop/etc/hadoop
+openjdk version "1.8.0_504"
+OpenJDK Runtime Environment (build 1.8.0_504-8u504-ga-1ubuntu1~26.04.3-b01)
+OpenJDK 64-Bit Server VM (build 25.504-b01, mixed mode)
+Python 3.12.16
+               total        used        free      shared  buff/cache   available
+Mem:           6.6Gi       4.4Gi       434Mi        80Mi       1.9Gi       2.2Gi
+Swap:          7.6Gi       1.1Gi       6.6Gi
+    PID COMMAND           RSS COMMAND
+   9771 java            449844 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dproc_namenode -Djava.net.preferIPv4Stack=true -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS -Dyarn.log.dir=/home/canh/hadoop/logs -Dyarn.log.file=hadoop-canh-namenode-canh-ubuntu.log -Dyarn.home.dir=/home/canh/hadoop -Dyarn.root.logger=INFO,console -Djava.library.path=/home/canh/hadoop/lib/native -Dhadoop.log.dir=/home/canh/hadoop/logs -Dhadoop.log.file=hadoop-canh-namenode-canh-ubuntu.log -Dhadoop.home.dir=/home/canh/hadoop -Dhadoop.id.str=canh -Dhadoop.root.logger=INFO,RFA -Dhadoop.policy.file=hadoop-policy.xml org.apache.hadoop.hdfs.server.namenode.NameNode
+   9941 java            332548 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dproc_datanode -Djava.net.preferIPv4Stack=true -Dhadoop.security.logger=ERROR,RFAS -Dyarn.log.dir=/home/canh/hadoop/logs -Dyarn.log.file=hadoop-canh-datanode-canh-ubuntu.log -Dyarn.home.dir=/home/canh/hadoop -Dyarn.root.logger=INFO,console -Djava.library.path=/home/canh/hadoop/lib/native -Dhadoop.log.dir=/home/canh/hadoop/logs -Dhadoop.log.file=hadoop-canh-datanode-canh-ubuntu.log -Dhadoop.home.dir=/home/canh/hadoop -Dhadoop.id.str=canh -Dhadoop.root.logger=INFO,RFA -Dhadoop.policy.file=hadoop-policy.xml org.apache.hadoop.hdfs.server.datanode.DataNode
+  10189 java            368184 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Dproc_secondarynamenode -Djava.net.preferIPv4Stack=true -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS -Dyarn.log.dir=/home/canh/hadoop/logs -Dyarn.log.file=hadoop-canh-secondarynamenode-canh-ubuntu.log -Dyarn.home.dir=/home/canh/hadoop -Dyarn.root.logger=INFO,console -Djava.library.path=/home/canh/hadoop/lib/native -Dhadoop.log.dir=/home/canh/hadoop/logs -Dhadoop.log.file=hadoop-canh-secondarynamenode-canh-ubuntu.log -Dhadoop.home.dir=/home/canh/hadoop -Dhadoop.id.str=canh -Dhadoop.root.logger=INFO,RFA -Dhadoop.policy.file=hadoop-policy.xml org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode
+26/11/07 16:32:03 WARN Utils: Your hostname, canh-ubuntu resolves to a loopback address: 127.0.1.1; using 192.168.0.109 instead (on interface wlp1s0)
+26/11/07 16:32:03 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/07 16:32:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Environment: 3.12.16 3.5.9 1.8.0_504 local[*] hdfs://localhost:9000
+root
+ |-- userId: integer (nullable = true)
+ |-- movieId: integer (nullable = true)
+ |-- rating: double (nullable = true)
+ |-- timestamp: integer (nullable = true)
+
+root
+ |-- movieId: integer (nullable = true)
+ |-- title: string (nullable = true)
+ |-- genres: string (nullable = true)
+
+[Stage 0:>                                                          (0 + 1) / 1]                                                                                Input counts: ratings=100836, movies=9742
++--------+-----------------------------------------+------------+----------+
+|movie_id|title                                    |rating_count|avg_rating|
++--------+-----------------------------------------+------------+----------+
+|356     |Forrest Gump (1994)                      |329         |4.1641    |
+|318     |Shawshank Redemption, The (1994)         |317         |4.429     |
+|296     |Pulp Fiction (1994)                      |307         |4.1971    |
+|593     |Silence of the Lambs, The (1991)         |279         |4.1613    |
+|2571    |Matrix, The (1999)                       |278         |4.1924    |
+|260     |Star Wars: Episode IV - A New Hope (1977)|251         |4.2311    |
+|480     |Jurassic Park (1993)                     |238         |3.75      |
+|110     |Braveheart (1995)                        |237         |4.0316    |
+|589     |Terminator 2: Judgment Day (1991)        |224         |3.971     |
+|527     |Schindler's List (1993)                  |220         |4.225     |
++--------+-----------------------------------------+------------+----------+
+only showing top 10 rows
+
+[Stage 37:>                                                         (0 + 1) / 1]                                                                                Output exists: hdfs://localhost:9000/user/bdsp/hw3/curated/ratings_parquet
+Output exists: hdfs://localhost:9000/user/bdsp/hw3/curated/movie_stats_parquet
+Output exists: hdfs://localhost:9000/user/bdsp/hw3/curated/movie_stats_json
+[Stage 50:=============================>                            (1 + 1) / 2]                                                                                Read-back parquet summary: 1297 rows, exact match
+Read-back json summary: 1297 rows, exact match
+Benchmark policy: One SparkSession, local[*], four shuffle partitions, no persist/cache calls. Each timing includes input DataFrame construction, query planning, HDFS read, CSV parsing or Parquet decoding, groupBy/count, and collect() to the driver. CSV uses an explicit schema; no CSV schema inference is timed. Parquet's stored schema metadata is read during construction. Startup, exports, validation, result comparison, and artifact writing are outside timed trials. One warm-up per format precedes all six timed trials (CSV three, then Parquet three). Earlier validation/export scans and warm-ups can populate HDFS/OS caches; caches are not flushed. These are warm-run measurements, not cold-disk tests.
+BENCHMARK {"format": "csv", "phase": "warmup", "trial": 1, "elapsed_seconds": 0.23620318099983706, "groups": 9724, "matches_reference": true}
+BENCHMARK {"format": "parquet", "phase": "warmup", "trial": 1, "elapsed_seconds": 0.20141516300009243, "groups": 9724, "matches_reference": true}
+BENCHMARK {"format": "csv", "phase": "timed", "trial": 1, "elapsed_seconds": 0.24992604299995946, "groups": 9724, "matches_reference": true}
+BENCHMARK {"format": "csv", "phase": "timed", "trial": 2, "elapsed_seconds": 0.20859052999958294, "groups": 9724, "matches_reference": true}
+BENCHMARK {"format": "csv", "phase": "timed", "trial": 3, "elapsed_seconds": 0.2326740680000512, "groups": 9724, "matches_reference": true}
+BENCHMARK {"format": "parquet", "phase": "timed", "trial": 1, "elapsed_seconds": 0.18476394700019227, "groups": 9724, "matches_reference": true}
+BENCHMARK {"format": "parquet", "phase": "timed", "trial": 2, "elapsed_seconds": 0.17260794100002386, "groups": 9724, "matches_reference": true}
+BENCHMARK {"format": "parquet", "phase": "timed", "trial": 3, "elapsed_seconds": 0.1755663519998052, "groups": 9724, "matches_reference": true}
+Verified results saved to /home/canh/code/Big_data_store_processing/2026_BDSP_HW3/report/spark; archive: /home/canh/code/Big_data_store_processing/2026_BDSP_HW3/report/spark/runs/20261107T093200113988276-20197
+{
+  "ratings_csv_count": 100836,
+  "movies_csv_count": 9742,
+  "ratings_parquet_count": 100836,
+  "movie_groups": 9724,
+  "movie_summary_count": 1297,
+  "ratings_rows_equal": true,
+  "aggregations_equal": true,
+  "summary_outputs_equal": true
+}
+{
+  "csv": {
+    "runtimes_seconds": [
+      0.24992604299995946,
+      0.20859052999958294,
+      0.2326740680000512
+    ],
+    "mean_seconds": 0.23039688033319786,
+    "median_seconds": 0.2326740680000512,
+    "min_seconds": 0.20859052999958294,
+    "max_seconds": 0.24992604299995946
+  },
+  "parquet": {
+    "runtimes_seconds": [
+      0.18476394700019227,
+      0.17260794100002386,
+      0.1755663519998052
+    ],
+    "mean_seconds": 0.17764608000000712,
+    "median_seconds": 0.1755663519998052,
+    "min_seconds": 0.17260794100002386,
+    "max_seconds": 0.18476394700019227
+  }
+}
+Application exit code: 0

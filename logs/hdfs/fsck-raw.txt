@@ -1,0 +1,49 @@
+Connecting to namenode via http://localhost:9870/fsck?ugi=canh&files=1&blocks=1&path=%2Fuser%2Fbdsp%2Fhw3%2Fraw
+FSCK started by canh (auth:SIMPLE) from /127.0.0.1 for path /user/bdsp/hw3/raw at Sat Nov 07 15:44:50 ICT 2026
+
+/user/bdsp/hw3/raw <dir>
+/user/bdsp/hw3/raw/movies.csv 494431 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-2060273643-127.0.1.1-1789788752591:blk_1073741858_1034 len=494431 Live_repl=1
+
+/user/bdsp/hw3/raw/ratings.csv 2483723 bytes, replicated: replication=1, 1 block(s):  OK
+0. BP-2060273643-127.0.1.1-1789788752591:blk_1073741857_1033 len=2483723 Live_repl=1
+
+
+Status: HEALTHY
+ Number of data-nodes:	1
+ Number of racks:		1
+ Total dirs:			1
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	2978154 B
+ Total files:	2
+ Total blocks (validated):	2 (avg. block size 1489077 B)
+ Minimally replicated blocks:	2 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	1
+ Average block replication:	1.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Sat Nov 07 15:44:50 ICT 2026 in 10 milliseconds
+
+
+The filesystem under path '/user/bdsp/hw3/raw' is HEALTHY
