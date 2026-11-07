@@ -1,0 +1,22 @@
+name: bdsp-hw3-mongodb
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb
+    ports:
+      - "127.0.0.1:27017:27017"
+    command: ["mongod", "--wiredTigerCacheSizeGB", "0.25"]
+    mem_limit: 1g
+    volumes:
+      - mongodb-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "quit(db.adminCommand('ping').ok === 1 ? 0 : 1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 10s
+
+volumes:
+  mongodb-data:
+    name: bdsp-hw3-mongodb-data

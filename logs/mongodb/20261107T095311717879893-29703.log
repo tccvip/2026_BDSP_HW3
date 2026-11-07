@@ -1,0 +1,164 @@
+Run ID: 20261107T095311717879893-29703
+UTC start: 2026-11-07T09:53:11+00:00
+Python: 3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]
+PyMongo: 4.19.0
+MongoDB ping: {'ok': 1.0}
+MongoDB version: 7.0.45
+Validated source: 1297 documents from 1 part files
+Resetting only bdsp_hw3.movie_stats
+{
+  "run_id": "20261107T095311717879893-29703",
+  "timestamp": "2026-11-07T09:53:16.593046+00:00",
+  "mongodb_version": "7.0.45",
+  "uri": "mongodb://localhost:27017",
+  "database": "bdsp_hw3",
+  "collection": "movie_stats",
+  "source_hdfs": "hdfs://localhost:9000/user/bdsp/hw3/curated/movie_stats_json",
+  "source_files": [
+    {
+      "path": "/home/canh/code/Big_data_store_processing/2026_BDSP_HW3/data/mongodb/20261107T095311717879893-29703/movie_stats_json/part-00000-042dbf2a-d804-45ec-9695-07d4ea856c10-c000.json",
+      "sha256": "7677b27bdb9b7c4bfcd7455ef07b2e8625fe7b0bb74abc34f336f390bfbdbb41"
+    }
+  ],
+  "document_count": 1297,
+  "sample_document": {
+    "_id": {
+      "$oid": "6aeef50cec5bb70aa7ad782c"
+    },
+    "movie_id": 1,
+    "title": "Toy Story (1995)",
+    "rating_count": 215,
+    "avg_rating": 3.9209
+  },
+  "sample_bson_types": {
+    "movie_id": "int",
+    "rating_count": "int",
+    "avg_rating": "double"
+  },
+  "all_document_bson_types": [
+    {
+      "_id": {
+        "movie_id": "int",
+        "rating_count": "int",
+        "avg_rating": "double"
+      },
+      "count": 1297
+    }
+  ],
+  "indexes_before": {
+    "_id_": {
+      "v": 2,
+      "key": [
+        [
+          "_id",
+          1
+        ]
+      ]
+    }
+  },
+  "index_name": "movie_id_1",
+  "index_information": {
+    "v": 2,
+    "key": [
+      [
+        "movie_id",
+        1
+      ]
+    ]
+  },
+  "query": {
+    "movie_id": 1
+  },
+  "before_index": {
+    "winning_plan": {
+      "stage": "COLLSCAN",
+      "filter": {
+        "movie_id": {
+          "$eq": 1
+        }
+      },
+      "direction": "forward"
+    },
+    "plan_stages": [
+      "COLLSCAN"
+    ],
+    "execution_stages": [
+      "COLLSCAN"
+    ],
+    "nReturned": 1,
+    "totalDocsExamined": 1297,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 0
+  },
+  "after_index": {
+    "winning_plan": {
+      "stage": "FETCH",
+      "inputStage": {
+        "stage": "IXSCAN",
+        "keyPattern": {
+          "movie_id": 1
+        },
+        "indexName": "movie_id_1",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+          "movie_id": []
+        },
+        "isUnique": false,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "movie_id": [
+            "[1, 1]"
+          ]
+        }
+      }
+    },
+    "plan_stages": [
+      "FETCH",
+      "IXSCAN"
+    ],
+    "execution_stages": [
+      "FETCH",
+      "IXSCAN"
+    ],
+    "nReturned": 1,
+    "totalDocsExamined": 1,
+    "executionTimeMillis": 1,
+    "totalKeysExamined": 1
+  },
+  "index_used": true,
+  "query_results_before": [
+    {
+      "_id": {
+        "$oid": "6aeef50cec5bb70aa7ad782c"
+      },
+      "movie_id": 1,
+      "title": "Toy Story (1995)",
+      "rating_count": 215,
+      "avg_rating": 3.9209
+    }
+  ],
+  "query_results_after": [
+    {
+      "_id": {
+        "$oid": "6aeef50cec5bb70aa7ad782c"
+      },
+      "movie_id": 1,
+      "title": "Toy Story (1995)",
+      "rating_count": 215,
+      "avg_rating": 3.9209
+    }
+  ],
+  "validation": {
+    "source_values_match": true,
+    "query_results_equal": true,
+    "nReturned_consistent": true,
+    "query_matches_source": true
+  },
+  "warnings": []
+}
+Results: /home/canh/code/Big_data_store_processing/2026_BDSP_HW3/report/mongodb; archive: /home/canh/code/Big_data_store_processing/2026_BDSP_HW3/report/mongodb/runs/20261107T095311717879893-29703
+MongoDB import and indexing workflow completed.
+Workflow exit code: 0

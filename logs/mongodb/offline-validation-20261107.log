@@ -1,0 +1,12 @@
+test_duplicate_id_and_missing_query_id (test_import_and_benchmark.ImportTests.test_duplicate_id_and_missing_query_id) ... ok
+test_invalid_json_has_file_and_line (test_import_and_benchmark.ImportTests.test_invalid_json_has_file_and_line) ... ok
+test_invalid_records_rejected (test_import_and_benchmark.ImportTests.test_invalid_records_rejected) ... ok
+test_metadata_ignored_and_double_conversion (test_import_and_benchmark.ImportTests.test_metadata_ignored_and_double_conversion) ... ok
+test_missing_parts (test_import_and_benchmark.ImportTests.test_missing_parts) ... ok
+test_multiple_part_files (test_import_and_benchmark.ImportTests.test_multiple_part_files) ... ok
+test_nested_sbe_and_classic_stages (test_import_and_benchmark.ImportTests.test_nested_sbe_and_classic_stages) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.004s
+
+OK
