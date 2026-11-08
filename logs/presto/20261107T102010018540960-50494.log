@@ -1,0 +1,21 @@
+Run ID: 20261107T102010018540960-50494
+UTC start: 2026-11-07T10:20:10+00:00
+Python: 3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]
+PyMongo: 4.19.0
+Presto version: 0.298.1-9e1b45f
+SHOW CATALOGS
+[{"Catalog": "mongodb"}, {"Catalog": "system"}]
+SHOW SCHEMAS FROM mongodb
+[{"Schema": "admin"}, {"Schema": "bdsp_hw3"}, {"Schema": "config"}, {"Schema": "information_schema"}, {"Schema": "local"}]
+SHOW TABLES FROM mongodb.bdsp_hw3
+[{"Table": "movie_stats"}]
+DESCRIBE mongodb.bdsp_hw3.movie_stats
+[{"Column": "movie_id", "Type": "bigint", "Extra": "", "Comment": "", "Precision": 19, "Scale": null, "Length": null}, {"Column": "title", "Type": "varchar", "Extra": "", "Comment": "", "Precision": null, "Scale": null, "Length": 2147483647}, {"Column": "rating_count", "Type": "bigint", "Extra": "", "Comment": "", "Precision": 19, "Scale": null, "Length": null}, {"Column": "avg_rating", "Type": "double", "Extra": "", "Comment": "", "Precision": 53, "Scale": null, "Length": null}]
+SELECT movie_id, title, rating_count, avg_rating
+FROM mongodb.bdsp_hw3.movie_stats
+WHERE rating_count >= 20
+ORDER BY avg_rating DESC, rating_count DESC, movie_id ASC
+LIMIT 10;
+[{"movie_id": 1104, "title": "Streetcar Named Desire, A (1951)", "rating_count": 20, "avg_rating": 4.475}, {"movie_id": 318, "title": "Shawshank Redemption, The (1994)", "rating_count": 317, "avg_rating": 4.429}, {"movie_id": 922, "title": "Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)", "rating_count": 27, "avg_rating": 4.3333}, {"movie_id": 898, "title": "Philadelphia Story, The (1940)", "rating_count": 29, "avg_rating": 4.3103}, {"movie_id": 1204, "title": "Lawrence of Arabia (1962)", "rating_count": 45, "avg_rating": 4.3}, {"movie_id": 475, "title": "In the Name of the Father (1993)", "rating_count": 25, "avg_rating": 4.3}, {"movie_id": 246, "title": "Hoop Dreams (1994)", "rating_count": 29, "avg_rating": 4.2931}, {"movie_id": 858, "title": "Godfather, The (1972)", "rating_count": 192, "avg_rating": 4.2891}, {"movie_id": 1235, "title": "Harold and Maude (1971)", "rating_count": 26, "avg_rating": 4.2885}, {"movie_id": 168252, "title": "Logan (2017)", "rating_count": 25, "avg_rating": 4.28}]
+Part 5 verified; results: /home/canh/code/Big_data_store_processing/2026_BDSP_HW3/report/presto
+Verification exit code: 0

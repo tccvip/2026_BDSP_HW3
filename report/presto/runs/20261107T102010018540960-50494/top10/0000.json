@@ -1,0 +1,28 @@
+{
+  "id": "20261107_102010_00030_ejcsu",
+  "infoUri": "http://localhost:8080/ui/query.html?20261107_102010_00030_ejcsu",
+  "nextUri": "http://localhost:8080/v1/statement/queued/20261107_102010_00030_ejcsu/1?slug=xdcd4448754bc4b538ff2bf289281f5ff",
+  "stats": {
+    "state": "WAITING_FOR_PREREQUISITES",
+    "waitingForPrerequisites": true,
+    "queued": false,
+    "scheduled": false,
+    "nodes": 0,
+    "totalSplits": 0,
+    "queuedSplits": 0,
+    "runningSplits": 0,
+    "completedSplits": 0,
+    "cpuTimeMillis": 0,
+    "wallTimeMillis": 0,
+    "waitingForPrerequisitesTimeMillis": 0,
+    "queuedTimeMillis": 0,
+    "elapsedTimeMillis": 0,
+    "processedRows": 0,
+    "processedBytes": 0,
+    "peakMemoryBytes": 0,
+    "peakTotalMemoryBytes": 0,
+    "peakTaskTotalMemoryBytes": 0,
+    "spilledBytes": 0
+  },
+  "warnings": []
+}

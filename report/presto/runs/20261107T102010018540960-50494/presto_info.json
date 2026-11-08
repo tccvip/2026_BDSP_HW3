@@ -1,0 +1,9 @@
+{
+  "nodeVersion": {
+    "version": "0.298.1-9e1b45f"
+  },
+  "environment": "bdsp_hw3",
+  "coordinator": true,
+  "starting": false,
+  "uptime": "5.74m"
+}

@@ -1,0 +1,761 @@
+{
+  "id": "20261107_102040_00034_ejcsu",
+  "infoUri": "http://localhost:8080/ui/query.html?20261107_102040_00034_ejcsu",
+  "partialCancelUri": "http://172.18.0.3:8080/v1/stage/20261107_102040_00034_ejcsu.0",
+  "nextUri": "http://localhost:8080/v1/statement/executing/20261107_102040_00034_ejcsu/1?slug=xf08344e3e6f84041ad34509d46c888a6",
+  "columns": [
+    {
+      "name": "Schema",
+      "type": "varchar",
+      "typeSignature": {
+        "rawType": "varchar",
+        "typeArguments": [],
+        "literalArguments": [],
+        "arguments": [
+          {
+            "kind": "LONG_LITERAL",
+            "value": 2147483647
+          }
+        ]
+      }
+    }
+  ],
+  "data": [
+    [
+      "admin"
+    ],
+    [
+      "bdsp_hw3"
+    ],
+    [
+      "config"
+    ],
+    [
+      "information_schema"
+    ],
+    [
+      "local"
+    ]
+  ],
+  "stats": {
+    "state": "RUNNING",
+    "waitingForPrerequisites": false,
+    "queued": false,
+    "scheduled": true,
+    "nodes": 1,
+    "totalSplits": 19,
+    "queuedSplits": 1,
+    "runningSplits": 17,
+    "completedSplits": 1,
+    "cpuTimeMillis": 5,
+    "wallTimeMillis": 6,
+    "waitingForPrerequisitesTimeMillis": 0,
+    "queuedTimeMillis": 0,
+    "elapsedTimeMillis": 57,
+    "processedRows": 5,
+    "processedBytes": 67,
+    "peakMemoryBytes": 135589,
+    "peakTotalMemoryBytes": 135589,
+    "peakTaskTotalMemoryBytes": 135589,
+    "spilledBytes": 0,
+    "rootStage": {
+      "stageId": "0",
+      "state": "RUNNING",
+      "done": false,
+      "nodes": 1,
+      "totalSplits": 1,
+      "queuedSplits": 1,
+      "runningSplits": 0,
+      "completedSplits": 0,
+      "cpuTimeMillis": 0,
+      "wallTimeMillis": 0,
+      "processedRows": 0,
+      "processedBytes": 0,
+      "subStages": [
+        {
+          "stageId": "1",
+          "state": "FINISHED",
+          "done": true,
+          "nodes": 1,
+          "totalSplits": 17,
+          "queuedSplits": 0,
+          "runningSplits": 17,
+          "completedSplits": 0,
+          "cpuTimeMillis": 2,
+          "wallTimeMillis": 2,
+          "processedRows": 5,
+          "processedBytes": 93,
+          "subStages": [
+            {
+              "stageId": "2",
+              "state": "FINISHED",
+              "done": true,
+              "nodes": 1,
+              "totalSplits": 1,
+              "queuedSplits": 0,
+              "runningSplits": 0,
+              "completedSplits": 1,
+              "cpuTimeMillis": 3,
+              "wallTimeMillis": 4,
+              "processedRows": 5,
+              "processedBytes": 67,
+              "subStages": []
+            }
+          ]
+        }
+      ]
+    },
+    "runtimeStats": {
+      "S1-taskUpdateRoundTripTime": {
+        "name": "S1-taskUpdateRoundTripTime",
+        "unit": "NANO",
+        "sum": 15000000,
+        "count": 2,
+        "max": 10000000,
+        "min": 5000000
+      },
+      "S1-taskStartWaitForEventLoop": {
+        "name": "S1-taskStartWaitForEventLoop",
+        "unit": "NANO",
+        "sum": 20018,
+        "count": 1,
+        "max": 20018,
+        "min": 20018
+      },
+      "checkAccessPermissionsTimeNanosOnCpu": {
+        "name": "checkAccessPermissionsTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 95669,
+        "count": 1,
+        "max": 95669,
+        "min": 95669
+      },
+      "systemAccessControl.checkCanSetUser": {
+        "name": "systemAccessControl.checkCanSetUser",
+        "unit": "NANO",
+        "sum": 4158,
+        "count": 1,
+        "max": 4158,
+        "min": 4158
+      },
+      "getIdentifierNormalizationTimeNanos": {
+        "name": "getIdentifierNormalizationTimeNanos",
+        "unit": "NANO",
+        "sum": 204888,
+        "count": 20,
+        "max": 59492,
+        "min": 992
+      },
+      "S0-schedulerWallTimeNanos": {
+        "name": "S0-schedulerWallTimeNanos",
+        "unit": "NANO",
+        "sum": 449942,
+        "count": 1,
+        "max": 449942,
+        "min": 449942
+      },
+      "S2-schedulerCpuTimeNanos": {
+        "name": "S2-schedulerCpuTimeNanos",
+        "unit": "NANO",
+        "sum": 930400,
+        "count": 2,
+        "max": 786832,
+        "min": 143568
+      },
+      "getColumnMetadataTimeNanos": {
+        "name": "getColumnMetadataTimeNanos",
+        "unit": "NANO",
+        "sum": 11231,
+        "count": 1,
+        "max": 11231,
+        "min": 11231
+      },
+      "systemAccessControl.checkCanAccessCatalog": {
+        "name": "systemAccessControl.checkCanAccessCatalog",
+        "unit": "NANO",
+        "sum": 3346,
+        "count": 2,
+        "max": 2524,
+        "min": 822
+      },
+      "systemAccessControl.getRowFilters": {
+        "name": "systemAccessControl.getRowFilters",
+        "unit": "NANO",
+        "sum": 1272,
+        "count": 1,
+        "max": 1272,
+        "min": 1272
+      },
+      "S1-createTime": {
+        "name": "S1-createTime",
+        "unit": "NONE",
+        "sum": 1794046840443,
+        "count": 1,
+        "max": 1794046840443,
+        "min": 1794046840443
+      },
+      "S0-taskQueuedTimeNanos": {
+        "name": "S0-taskQueuedTimeNanos",
+        "unit": "NANO",
+        "sum": 1277839,
+        "count": 1,
+        "max": 1277839,
+        "min": 1277839
+      },
+      "planAndOptimizeTimeNanosOnCpu": {
+        "name": "planAndOptimizeTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 19051434,
+        "count": 1,
+        "max": 19051434,
+        "min": 19051434
+      },
+      "S0-taskElapsedTimeNanos": {
+        "name": "S0-taskElapsedTimeNanos",
+        "unit": "NANO",
+        "sum": 0,
+        "count": 1,
+        "max": 0,
+        "min": 0
+      },
+      "S0-taskStartWaitForEventLoop": {
+        "name": "S0-taskStartWaitForEventLoop",
+        "unit": "NANO",
+        "sum": 37421,
+        "count": 1,
+        "max": 37421,
+        "min": 37421
+      },
+      "getColumnHandleTimeNanos": {
+        "name": "getColumnHandleTimeNanos",
+        "unit": "NANO",
+        "sum": 42710,
+        "count": 1,
+        "max": 42710,
+        "min": 42710
+      },
+      "systemAccessControl.getColumnMasks": {
+        "name": "systemAccessControl.getColumnMasks",
+        "unit": "NANO",
+        "sum": 2665,
+        "count": 1,
+        "max": 2665,
+        "min": 2665
+      },
+      "S2-taskPlanSerializedCpuNanos": {
+        "name": "S2-taskPlanSerializedCpuNanos",
+        "unit": "NANO",
+        "sum": 467545,
+        "count": 1,
+        "max": 467545,
+        "min": 467545
+      },
+      "S2-scanStageSchedulerWallTimeNanos": {
+        "name": "S2-scanStageSchedulerWallTimeNanos",
+        "unit": "NANO",
+        "sum": 931925,
+        "count": 2,
+        "max": 787872,
+        "min": 144053
+      },
+      "optimizerTimeNanos": {
+        "name": "optimizerTimeNanos",
+        "unit": "NANO",
+        "sum": 10044795,
+        "count": 1,
+        "max": 10044795,
+        "min": 10044795
+      },
+      "S1-taskUpdateSerializedCpuNanos": {
+        "name": "S1-taskUpdateSerializedCpuNanos",
+        "unit": "NANO",
+        "sum": 847386,
+        "count": 2,
+        "max": 562323,
+        "min": 285063
+      },
+      "S1-taskUpdateDeliveredWallTimeNanos": {
+        "name": "S1-taskUpdateDeliveredWallTimeNanos",
+        "unit": "NANO",
+        "sum": 27019058,
+        "count": 2,
+        "max": 14334676,
+        "min": 12684382
+      },
+      "S2-taskStartWaitForEventLoop": {
+        "name": "S2-taskStartWaitForEventLoop",
+        "unit": "NANO",
+        "sum": 11802,
+        "count": 1,
+        "max": 11802,
+        "min": 11802
+      },
+      "S1-driverCountPerTask": {
+        "name": "S1-driverCountPerTask",
+        "unit": "NONE",
+        "sum": 17,
+        "count": 1,
+        "max": 17,
+        "min": 17
+      },
+      "S2-driverCountPerTask": {
+        "name": "S2-driverCountPerTask",
+        "unit": "NONE",
+        "sum": 1,
+        "count": 1,
+        "max": 1,
+        "min": 1
+      },
+      "S1-taskElapsedTimeNanos": {
+        "name": "S1-taskElapsedTimeNanos",
+        "unit": "NANO",
+        "sum": 0,
+        "count": 1,
+        "max": 0,
+        "min": 0
+      },
+      "createSchedulerTimeNanosOnCpu": {
+        "name": "createSchedulerTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 746708,
+        "count": 1,
+        "max": 746708,
+        "min": 746708
+      },
+      "S0-driverCountPerTask": {
+        "name": "S0-driverCountPerTask",
+        "unit": "NONE",
+        "sum": 1,
+        "count": 1,
+        "max": 1,
+        "min": 1
+      },
+      "getCanonicalInfoTimeNanosOnCpu": {
+        "name": "getCanonicalInfoTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 31960,
+        "count": 1,
+        "max": 31960,
+        "min": 31960
+      },
+      "getViewTimeNanos": {
+        "name": "getViewTimeNanos",
+        "unit": "NANO",
+        "sum": 19477,
+        "count": 1,
+        "max": 19477,
+        "min": 19477
+      },
+      "S1-eventLoopMethodExecutionCpuNanos": {
+        "name": "S1-eventLoopMethodExecutionCpuNanos",
+        "unit": "NANO",
+        "sum": 4547694,
+        "count": 9,
+        "max": 2111953,
+        "min": 3126
+      },
+      "getTableHandleTimeNanos": {
+        "name": "getTableHandleTimeNanos",
+        "unit": "NANO",
+        "sum": 21621,
+        "count": 1,
+        "max": 21621,
+        "min": 21621
+      },
+      "S0-eventLoopMethodExecutionCpuNanos": {
+        "name": "S0-eventLoopMethodExecutionCpuNanos",
+        "unit": "NANO",
+        "sum": 1856766,
+        "count": 6,
+        "max": 1348224,
+        "min": 3206
+      },
+      "S2-taskQueuedTimeNanos": {
+        "name": "S2-taskQueuedTimeNanos",
+        "unit": "NANO",
+        "sum": 1111705,
+        "count": 1,
+        "max": 1111705,
+        "min": 1111705
+      },
+      "S0-taskScheduledTimeNanos": {
+        "name": "S0-taskScheduledTimeNanos",
+        "unit": "NANO",
+        "sum": 0,
+        "count": 1,
+        "max": 0,
+        "min": 0
+      },
+      "validateFinalPlanTimeNanos": {
+        "name": "validateFinalPlanTimeNanos",
+        "unit": "NANO",
+        "sum": 133072,
+        "count": 1,
+        "max": 133072,
+        "min": 133072
+      },
+      "createSchedulerTimeNanos": {
+        "name": "createSchedulerTimeNanos",
+        "unit": "NANO",
+        "sum": 817919,
+        "count": 1,
+        "max": 817919,
+        "min": 817919
+      },
+      "S0-taskPlanSerializedCpuNanos": {
+        "name": "S0-taskPlanSerializedCpuNanos",
+        "unit": "NANO",
+        "sum": 293590,
+        "count": 1,
+        "max": 293590,
+        "min": 293590
+      },
+      "S2-createTime": {
+        "name": "S2-createTime",
+        "unit": "NONE",
+        "sum": 1794046840442,
+        "count": 1,
+        "max": 1794046840442,
+        "min": 1794046840442
+      },
+      "S2-scanStageSchedulerCpuTimeNanos": {
+        "name": "S2-scanStageSchedulerCpuTimeNanos",
+        "unit": "NANO",
+        "sum": 930400,
+        "count": 2,
+        "max": 786832,
+        "min": 143568
+      },
+      "S2-taskUpdateDeliveredUpdates": {
+        "name": "S2-taskUpdateDeliveredUpdates",
+        "unit": "NONE",
+        "sum": 2,
+        "count": 2,
+        "max": 1,
+        "min": 1
+      },
+      "systemAccessControl.checkCanShowSchemas": {
+        "name": "systemAccessControl.checkCanShowSchemas",
+        "unit": "NANO",
+        "sum": 1152,
+        "count": 1,
+        "max": 1152,
+        "min": 1152
+      },
+      "S2-schedulerWallTimeNanos": {
+        "name": "S2-schedulerWallTimeNanos",
+        "unit": "NANO",
+        "sum": 931925,
+        "count": 2,
+        "max": 787872,
+        "min": 144053
+      },
+      "S2-endTime": {
+        "name": "S2-endTime",
+        "unit": "NONE",
+        "sum": 1794046840458,
+        "count": 1,
+        "max": 1794046840458,
+        "min": 1794046840458
+      },
+      "S0-taskUpdateRoundTripTime": {
+        "name": "S0-taskUpdateRoundTripTime",
+        "unit": "NANO",
+        "sum": 7000000,
+        "count": 1,
+        "max": 7000000,
+        "min": 7000000
+      },
+      "getLayoutTimeNanos": {
+        "name": "getLayoutTimeNanos",
+        "unit": "NANO",
+        "sum": 3402090,
+        "count": 3,
+        "max": 1186336,
+        "min": 1065056
+      },
+      "optimizerTimeNanosOnCpu": {
+        "name": "optimizerTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 9625724,
+        "count": 1,
+        "max": 9625724,
+        "min": 9625724
+      },
+      "S1-taskUpdateDeliveredUpdates": {
+        "name": "S1-taskUpdateDeliveredUpdates",
+        "unit": "NONE",
+        "sum": 2,
+        "count": 2,
+        "max": 1,
+        "min": 1
+      },
+      "systemAccessControl.checkQueryIntegrity": {
+        "name": "systemAccessControl.checkQueryIntegrity",
+        "unit": "NANO",
+        "sum": 2745,
+        "count": 1,
+        "max": 2745,
+        "min": 2745
+      },
+      "S1-taskPlanSerializedCpuNanos": {
+        "name": "S1-taskPlanSerializedCpuNanos",
+        "unit": "NANO",
+        "sum": 773017,
+        "count": 1,
+        "max": 773017,
+        "min": 773017
+      },
+      "S0-schedulerCpuTimeNanos": {
+        "name": "S0-schedulerCpuTimeNanos",
+        "unit": "NANO",
+        "sum": 448620,
+        "count": 1,
+        "max": 448620,
+        "min": 448620
+      },
+      "systemAccessControl.checkCanSelectFromColumns": {
+        "name": "systemAccessControl.checkCanSelectFromColumns",
+        "unit": "NANO",
+        "sum": 892,
+        "count": 1,
+        "max": 892,
+        "min": 892
+      },
+      "S0-createTime": {
+        "name": "S0-createTime",
+        "unit": "NONE",
+        "sum": 1794046840442,
+        "count": 1,
+        "max": 1794046840442,
+        "min": 1794046840442
+      },
+      "analyzeTimeNanosOnCpu": {
+        "name": "analyzeTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 2138182,
+        "count": 1,
+        "max": 2138182,
+        "min": 2138182
+      },
+      "logicalPlannerTimeNanosOnCpu": {
+        "name": "logicalPlannerTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 1421911,
+        "count": 1,
+        "max": 1421911,
+        "min": 1421911
+      },
+      "validateIntermediatePlanTimeNanosOnCpu": {
+        "name": "validateIntermediatePlanTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 206717,
+        "count": 1,
+        "max": 206717,
+        "min": 206717
+      },
+      "S1-taskScheduledTimeNanos": {
+        "name": "S1-taskScheduledTimeNanos",
+        "unit": "NANO",
+        "sum": 1930594,
+        "count": 1,
+        "max": 1930594,
+        "min": 1930594
+      },
+      "S2-taskUpdateSerializedCpuNanos": {
+        "name": "S2-taskUpdateSerializedCpuNanos",
+        "unit": "NANO",
+        "sum": 889806,
+        "count": 2,
+        "max": 567613,
+        "min": 322193
+      },
+      "S1-taskBlockedTimeNanos": {
+        "name": "S1-taskBlockedTimeNanos",
+        "unit": "NANO",
+        "sum": 102734360,
+        "count": 1,
+        "max": 102734360,
+        "min": 102734360
+      },
+      "S2-taskElapsedTimeNanos": {
+        "name": "S2-taskElapsedTimeNanos",
+        "unit": "NANO",
+        "sum": 11497455,
+        "count": 1,
+        "max": 11497455,
+        "min": 11497455
+      },
+      "S2-taskUpdateDeliveredWallTimeNanos": {
+        "name": "S2-taskUpdateDeliveredWallTimeNanos",
+        "unit": "NANO",
+        "sum": 27657027,
+        "count": 2,
+        "max": 15274486,
+        "min": 12382541
+      },
+      "getMaterializedViewTimeNanos": {
+        "name": "getMaterializedViewTimeNanos",
+        "unit": "NANO",
+        "sum": 5751,
+        "count": 1,
+        "max": 5751,
+        "min": 5751
+      },
+      "S0-taskUpdateDeliveredUpdates": {
+        "name": "S0-taskUpdateDeliveredUpdates",
+        "unit": "NONE",
+        "sum": 2,
+        "count": 1,
+        "max": 2,
+        "min": 2
+      },
+      "S0-taskUpdateDeliveredWallTimeNanos": {
+        "name": "S0-taskUpdateDeliveredWallTimeNanos",
+        "unit": "NANO",
+        "sum": 8874520,
+        "count": 1,
+        "max": 8874520,
+        "min": 8874520
+      },
+      "S1-schedulerWallTimeNanos": {
+        "name": "S1-schedulerWallTimeNanos",
+        "unit": "NANO",
+        "sum": 453909,
+        "count": 1,
+        "max": 453909,
+        "min": 453909
+      },
+      "validateIntermediatePlanTimeNanos": {
+        "name": "validateIntermediatePlanTimeNanos",
+        "unit": "NANO",
+        "sum": 205289,
+        "count": 1,
+        "max": 205289,
+        "min": 205289
+      },
+      "analyzeTimeNanos": {
+        "name": "analyzeTimeNanos",
+        "unit": "NANO",
+        "sum": 2138428,
+        "count": 1,
+        "max": 2138428,
+        "min": 2138428
+      },
+      "getCanonicalInfoTimeNanos": {
+        "name": "getCanonicalInfoTimeNanos",
+        "unit": "NANO",
+        "sum": 31960,
+        "count": 1,
+        "max": 31960,
+        "min": 31960
+      },
+      "planAndOptimizeTimeNanos": {
+        "name": "planAndOptimizeTimeNanos",
+        "unit": "NANO",
+        "sum": 19487210,
+        "count": 1,
+        "max": 19487210,
+        "min": 19487210
+      },
+      "fragmentPlanTimeNanos": {
+        "name": "fragmentPlanTimeNanos",
+        "unit": "NANO",
+        "sum": 7786320,
+        "count": 1,
+        "max": 7786320,
+        "min": 7786320
+      },
+      "S2-taskUpdateRoundTripTime": {
+        "name": "S2-taskUpdateRoundTripTime",
+        "unit": "NANO",
+        "sum": 14000000,
+        "count": 2,
+        "max": 9000000,
+        "min": 5000000
+      },
+      "fragmentPlanTimeNanosOnCpu": {
+        "name": "fragmentPlanTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 7778326,
+        "count": 1,
+        "max": 7778326,
+        "min": 7778326
+      },
+      "S2-taskScheduledTimeNanos": {
+        "name": "S2-taskScheduledTimeNanos",
+        "unit": "NANO",
+        "sum": 3517499,
+        "count": 1,
+        "max": 3517499,
+        "min": 3517499
+      },
+      "logicalPlannerTimeNanos": {
+        "name": "logicalPlannerTimeNanos",
+        "unit": "NANO",
+        "sum": 1414177,
+        "count": 1,
+        "max": 1414177,
+        "min": 1414177
+      },
+      "S2-getSplitsTimeNanos": {
+        "name": "S2-getSplitsTimeNanos",
+        "unit": "NANO",
+        "sum": 9248,
+        "count": 1,
+        "max": 9248,
+        "min": 9248
+      },
+      "S1-taskQueuedTimeNanos": {
+        "name": "S1-taskQueuedTimeNanos",
+        "unit": "NANO",
+        "sum": 2609140,
+        "count": 1,
+        "max": 2609140,
+        "min": 2609140
+      },
+      "checkAccessPermissionsTimeNanos": {
+        "name": "checkAccessPermissionsTimeNanos",
+        "unit": "NANO",
+        "sum": 96052,
+        "count": 1,
+        "max": 96052,
+        "min": 96052
+      },
+      "validateFinalPlanTimeNanosOnCpu": {
+        "name": "validateFinalPlanTimeNanosOnCpu",
+        "unit": "NANO",
+        "sum": 129072,
+        "count": 1,
+        "max": 129072,
+        "min": 129072
+      },
+      "S0-taskUpdateSerializedCpuNanos": {
+        "name": "S0-taskUpdateSerializedCpuNanos",
+        "unit": "NANO",
+        "sum": 460712,
+        "count": 1,
+        "max": 460712,
+        "min": 460712
+      },
+      "S1-schedulerCpuTimeNanos": {
+        "name": "S1-schedulerCpuTimeNanos",
+        "unit": "NANO",
+        "sum": 453038,
+        "count": 1,
+        "max": 453038,
+        "min": 453038
+      },
+      "S2-eventLoopMethodExecutionCpuNanos": {
+        "name": "S2-eventLoopMethodExecutionCpuNanos",
+        "unit": "NANO",
+        "sum": 4150258,
+        "count": 8,
+        "max": 1774772,
+        "min": 2995
+      }
+    },
+    "progressPercentage": 5.2631578947368425
+  },
+  "warnings": []
+}

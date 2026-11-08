@@ -1,0 +1,25 @@
+name: bdsp-hw3-presto
+
+services:
+  presto:
+    image: prestodb/presto:0.298.1
+    container_name: presto
+    ports:
+      - "127.0.0.1:8080:8080"
+    mem_limit: 1536m
+    volumes:
+      - ./etc:/opt/presto-server/etc:ro
+      - ./sql:/opt/hw3/sql:ro
+    networks:
+      - mongodb-network
+    healthcheck:
+      test: ["CMD", "presto-cli", "--server", "http://localhost:8080", "--execute", "SELECT 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+
+networks:
+  mongodb-network:
+    external: true
+    name: ${MONGODB_NETWORK:-bdsp-hw3-mongodb_default}
