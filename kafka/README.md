@@ -101,7 +101,9 @@ Run `up -d` again to resume using the same named volume. Do not add `-v` to
 
 ## Validation status
 
-The files were inspected statically. No Docker commands were executed by the
-assistant, so image startup, volume permissions, memory sufficiency, and broker
-operation remain unverified. Provide the startup logs and verification output
-before proceeding to the producer experiment.
+Saved E1 JSON/TXT results in `logs/e1/` report 5,000 successful records in
+0.600682 seconds and 30,000 in 3.011591 seconds, with zero failed records.
+Cumulative partition offsets total 10,000 and 60,000; the user reported two
+replays per topic. Topic-description output was not retained: three partitions
+are visible in offsets, while replication factor one is configuration evidence.
+A fresh checkout must verify its own broker readiness and topic definitions.

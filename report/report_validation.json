@@ -1,0 +1,73 @@
+{
+  "output": "report/BDSP_HW3_Report.docx",
+  "planned_pages": 6,
+  "explicit_page_breaks": 5,
+  "rendered_page_count": null,
+  "pdf_created": false,
+  "pagination_limit": "No local Word/LibreOffice renderer; six designed pages, overflow not verified. No PDF generated per user instruction.",
+  "tables": 4,
+  "figures": 1,
+  "questions_verbatim": {
+    "1": "Q1. Distinguish logical file size, HDFS block size and replication factor. Why does this single-DataNode setup not demonstrate fault tolerance?",
+    "2": "Q2. Why use userId as the Kafka key? What ordering guarantee does Kafka provide, and what guarantee does it not provide across three partitions?",
+    "3": "Q3. Compare the logical input record counts and the query results from CSV and Parquet. Why must these match?",
+    "4": "Q4. Explain your measured runtime results. Do not claim that Parquet is always faster: consider schema inference, caching, Spark startup and this small dataset.",
+    "5": "Q5. What changes in the execution plan and totalDocsExamined? Explain why a selective lookup benefits from an index even if elapsed time changes very little.",
+    "6": "Q6. Does Presto copy the entire MongoDB collection into its own permanent storage? Describe the roles of Presto (query engine), MongoDB (data source) and the connector.",
+    "7": "Q7. Suppose you rerun the JSON import without clearing the MongoDB collection or using idempotent upserts. What can go wrong? Propose a practical way to make the import repeatable.",
+    "8": "Q8. Compare the five technologies by their roles in this homework. Which components provide durable storage, message transport, computation and interactive querying? Identify one important limitation of this simplified single-machine deployment."
+  },
+  "answers_present": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "reproducibility_word_count": 121,
+  "sources_sha256": {
+    "HW3_BDSP_2026.docx": "863e28e09f7c87701cda7491447868a4bb25cb476376a5f6463959cf713040f2",
+    "kafka/docker-compose.yml": "3acfce276359ebc39a4215089c2e894ea9ccf9d60019e5641a623491fb7d0892",
+    "kafka/producer.py": "9a3bed35b012adfb9aafc98abf81850f06a15c3afcac96fc0d47b7f0e833b889",
+    "logs/e1/kafka-offsets.txt": "8e24c9308066f4eb422c4f4746be0ace9a39e809354f5cf03e52e7bf4acfc6e4",
+    "logs/e1/ratings-30k.json": "acb2e42b172e37b0ebd5be726ce42fa48fc23f41c9581562ae132d1e438719c0",
+    "logs/e1/ratings-30k.txt": "bd072b79984c263d12632353bda30660f3816aba3e654f2e8982e9771e655820",
+    "logs/e1/ratings-5k.json": "c2adaad25c349205be10079343c8e85456eb2ce146962a9c26196091130992b8",
+    "logs/e1/ratings-5k.txt": "4786040e9dc5f167aec4a0fb2ed68cb6b4f1244d701a3376bb94a38dd4aced39",
+    "logs/hdfs/dfsadmin-report.txt": "24d01481bf4d4bbce8a3ca7b06c6c4b1183c1bf356d3ee1132c19bd5187086b2",
+    "logs/hdfs/file-metadata.txt": "193dee4534ab772ebf03e35d20a3c8f4b964d3f6596623f3bc0d26ce9cb24085",
+    "logs/hdfs/fsck-raw.txt": "8be01e9bf3b664fd2b1a9b2723ab94135d7242f9f1f3c50541422f58d9fc1b12",
+    "logs/hdfs/jps.txt": "9afd7822f266ba53b4c70889464853cfb21806c946dc3c6cf2d0796b1b78c70f",
+    "logs/hdfs/raw-files.txt": "75ddcfb6517f3a315cb2fcbecf359e86e081f8c1dacf36be07709e06f4c99d19",
+    "logs/mongodb/20261107T095311717879893-29703.log": "003087d6eac168b606cc6268ccd8d87c13aff17bc4d91635e203ec5786a88f7f",
+    "logs/presto/20261107T102039993884991-51086.log": "a80c1c6a0f235d4e210964bc7205274a4fe3e35bbc0d9fb177854c5c3c3752b6",
+    "logs/spark/20261107T093200113988276-20197.log": "a36dcdb1fc91c4284024395b760f181c6404f52e5a5458d09b744a4ee138eb80",
+    "mongodb/import_and_benchmark.py": "2e36362efe30a4ed80e7f8205d82857fb88ed28f065b94a004ca93aa19a0456a",
+    "presto/compose.yaml": "cdfc260d30bc99bc0a95071c6f23a7eacd9c9bf5f525421e8a49cafe19a2446d",
+    "presto/verify_hw3.py": "a35d6199e5ef74705b099fa9b72af1b7da127a16b13367e5dd3d7f9d417a83a0",
+    "report/component_snapshot.txt": "92184781d3d2e0f71cd8722a9b020901a357b2bff6b92042b14487839c1d3d57",
+    "report/environment_snapshot.json": "f4f6f64943de5a72162e618ed8572a06fbc3a1e93ed479c81f90263b0bc1f906",
+    "report/mongodb/benchmark_results.json": "7e94337e8097f0f2d48638d72b1862eec7bb7720be67aba19855ddb445bc83f1",
+    "report/mongodb/explain_after_index.json": "531bae947bbf1cc9dbaf4b1e550d2040b656aac0c8c487d6f90b43c633b9c18a",
+    "report/mongodb/explain_before_index.json": "1bf6835be8644c5767792178fc89a7f6d8049ef64e24069bdd8f090350b3308a",
+    "report/presto/verification_results.json": "0627845db4578a1fa0a5026bf5e663e3eb593eff90b5bf536214f79900ed55be",
+    "report/spark/benchmark_results.csv": "89a77e262ce04a5f23a4d5c21c5bd821f7b9c80ab470faa3f2add0cf603063b6",
+    "report/spark/benchmark_summary.json": "4bd1ccaf6564d9fa54d14f6e945ec75254800dc425e7fce9baf52ecb372158df",
+    "spark/run_hw3.py": "06b27ac78189ceb9b27e85062f5a5376041b15903eacaf550313cd422d25b4c4"
+  },
+  "evidence_gaps": [
+    "Supplied E1 cross-check values differ from both saved JSON/TXT run pairs.",
+    "Kafka topic-description output is absent; topic replication is configuration evidence.",
+    "Complete historical service inventories were not recorded."
+  ],
+  "derived": {
+    "mongodb_documents_examined_reduction_percent": 99.92289899768697,
+    "offset_totals": {
+      "ratings-5k": 10000,
+      "ratings-30k": 60000
+    }
+  }
+}

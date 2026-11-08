@@ -6,10 +6,10 @@ Run from the project root:
 bash scripts/run_spark_hw3.sh
 ```
 
-From another working directory, use the absolute launcher path:
+From another working directory, replace the placeholder with your checkout path:
 
 ```bash
-bash /home/canh/code/Big_data_store_processing/2026_BDSP_HW3/scripts/run_spark_hw3.sh
+bash /path/to/2026_BDSP_HW3/scripts/run_spark_hw3.sh
 ```
 
 Prerequisites: the existing `.venv` with Python 3.12 and PySpark 3.5.9;

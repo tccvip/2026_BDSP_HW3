@@ -1,3 +1,64 @@
-# Ignore the data directory
+# Audited data/: official downloaded ZIP/CSVs and MongoDB staging, not evidence.
 /data/
 
+# Python environments and caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local editor, OS, temporary, and PID files; no shared IDE settings exist.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.pid
+*.pid.lock
+
+# Secrets and local settings; preserve safe examples.
+.env
+.env.*
+!.env.example
+!.env.sample
+.aws/
+.ssh/
+.codex/
+.agents/
+credentials
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Local service storage/scratch. Current named Docker volumes are outside Git.
+/hadoop_data/
+/kafka/data/
+/mongodb/data/
+/mongodb/db/
+/mongodb/dump/
+/presto/data/
+/spark-warehouse/
+/metastore_db/
+/.sparkStaging/
+/derby.log
+/logs/local/
+/logs/tmp/
+
+# Keep all existing logs/, report/ results, run archives, and the final DOCX.
